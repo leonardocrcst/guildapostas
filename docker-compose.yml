@@ -1,0 +1,10 @@
+version: "3.7"  # optional since v1.27.0
+
+services:
+  laravel:
+    build: .
+    container_name: guilda
+    ports:
+      - "8080:80"
+    volumes:
+      - ./aposta:/var/www/html
