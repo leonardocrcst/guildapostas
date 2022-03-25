@@ -33,7 +33,8 @@ RUN apk add --no-cache php8 \
     php8-pdo_mysql \
     php8-pdo_sqlite \
     php8-tokenizer \
-    php8-pecl-redis
+    php8-pecl-redis \
+    php8-xdebug
 
 RUN ln -s /usr/bin/php8 /usr/bin/php
 
@@ -52,6 +53,7 @@ RUN touch /run/php/php8.0-fpm.pid
 
 COPY .docker/php-fpm.conf /etc/php8/php-fpm.conf
 COPY .docker/php.ini-production /etc/php8/php.ini
+COPY .docker/xdebug.conf /etc/php8/conf.d/50_xdebug.ini
 
 # Configure nginx
 COPY .docker/nginx.conf /etc/nginx/
