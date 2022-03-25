@@ -68,5 +68,5 @@ RUN ln -sf /dev/stderr /var/log/nginx/error.log
 # RUN composer install --no-dev
 # RUN chown -R nobody:nobody /var/www/html/storage
 
-EXPOSE 80
+EXPOSE 8000
 CMD ["supervisord", "-c", "/etc/supervisor.d/supervisord.ini"]

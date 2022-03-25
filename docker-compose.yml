@@ -5,6 +5,6 @@ services:
     build: .
     container_name: guilda
     ports:
-      - "8080:80"
+      - "8001:8000"
     volumes:
       - ./aposta:/var/www/html
